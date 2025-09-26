@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island Tourism - Discover Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Header -->
+<header class="header">
+    <nav class="nav-container">
+        <a href="#" class="logo" aria-label="Taniti Island Tourism Home">🏝️ TANITI</a>
+
+        <ul class="main-nav" id="main-nav" role="navigation">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stay">Stay</a></li>
+            <li><a href="#eat">Eat</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#plan">Transportation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Discover Paradise</h1>
+        <p>Experience the natural beauty and adventure of Taniti Island</p>
+        <button class="cta-btn"><a href="#main-content">Start Planning Your Trip</a></button>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Quick Actions -->
+    <section class="section">
+        <div class="container">
+            <h2>Plan Your Perfect Trip</h2>
+            <div class="quick-actions">
+                <div class="action-card">
+                    <h3>🏨 Find Hotels</h3>
+                    <p>From luxury resorts to cozy bed & breakfasts</p>
+                    <button class="action-btn" onclick="navigateToSection('stay')">Browse Accommodations</button>
+                </div>
+                <div class="action-card">
+                    <h3>🌋 Book Activities</h3>
+                    <p>Volcano tours, snorkeling, rainforest hikes</p>
+                    <button class="action-btn" onclick="navigateToSection('explore')">Explore Adventures</button>
+                </div>
+                <div class="action-card">
+                    <h3>✈️ Transportation</h3>
+                    <p>Airport transfers, car rentals, island tours</p>
+                    <button class="action-btn" onclick="navigateToSection('plan')">Get Around</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Packages -->
+    <section class="section packages" id="packages">
+        <div class="container">
+            <h2>Most Popular Trip Ideas</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">Don't know where to start? Here's what most visitors do during their stay</p>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-image">🌋 Volcano Adventure</div>
+                    <div class="package-content">
+                        <h3 class="package-title">Volcano Explorer</h3>
+                        <p class="package-duration">3 Days / 2 Nights</p>
+                        <p class="package-price">From $299/person</p>
+                        <ul class="package-features">
+                            <li>Hotel accommodation in Taniti City</li>
+                            <li>Guided volcano hike</li>
+                            <li>Helicopter tour</li>
+                            <li>Traditional dinner</li>
+                            <li>Airport transfers</li>
+                        </ul>
+                        <button class="action-btn" onclick="openBookingModal('volcano-explorer-package')">Book This Package</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">🏖️ Beach Bliss</div>
+                    <div class="package-content">
+                        <h3 class="package-title">Beach Paradise</h3>
+                        <p class="package-duration">5 Days / 4 Nights</p>
+                        <p class="package-price">From $449/person</p>
+                        <ul class="package-features">
+                            <li>Beachfront resort stay</li>
+                            <li>Snorkeling equipment</li>
+                            <li>Fishing charter tour</li>
+                            <li>Beach activities</li>
+                            <li>Daily breakfast</li>
+                        </ul>
+                        <button class="action-btn" onclick="openBookingModal('beach-paradise-package')">Book This Package</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">🌿 Island Explorer</div>
+                    <div class="package-content">
+                        <h3 class="package-title">Complete Island Experience</h3>
+                        <p class="package-duration">7 Days / 6 Nights</p>
+                        <p class="package-price">From $699/person</p>
+                        <ul class="package-features">
+                            <li>Mixed accommodation (hotel + B&B)</li>
+                            <li>Volcano and rainforest tours</li>
+                            <li>Cultural museum visits</li>
+                            <li>Zip-lining adventure</li>
+                            <li>Rental car for 3 days</li>
+                        </ul>
+                        <button class="action-btn" onclick="openBookingModal('island-explorer-package')">Book This Package</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="content-layout">
+                <div class="main-content">
+                    <h2>Top Activities & Attractions</h2>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="activity-image">🌋 Active Volcano</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Volcano Tours</h3>
+                                <p class="activity-price">From $85/person</p>
+                                <p>Guided hikes and helicopter rides to see our active volcano up close.</p>
+                                <button class="action-btn" onclick="openBookingModal('volcano-tour')">Book Tour</button>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-image">🏖️ Yellow Leaf Bay</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Beach Activities</h3>
+                                <p class="activity-price">From $25/person</p>
+                                <p>Snorkeling, swimming, and relaxing on pristine white sand beaches.</p>
+                                <button class="action-btn" onclick="openBookingModal('beach-activities')">Book Activity</button>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-image">🌿 Rainforest</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Rainforest Adventures</h3>
+                                <p class="activity-price">From $65/person</p>
+                                <p>Hiking trails, zip-lining, and wildlife spotting in lush tropical forests.</p>
+                                <button class="action-btn" onclick="openBookingModal('rainforest-adventure')">Book Adventure</button>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-image">🎣 Fishing Charter</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Chartered Fishing</h3>
+                                <p class="activity-price">From $120/person</p>
+                                <p>Half-day and full-day fishing tours with experienced local guides.</p>
+                                <button class="action-btn" onclick="openBookingModal('fishing-charter')">Book Charter</button>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-image">🏛️ History Museum</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Cultural Tours</h3>
+                                <p class="activity-price">From $15/person</p>
+                                <p>Local history museum, art galleries, and cultural experiences.</p>
+                                <button class="action-btn" onclick="openBookingModal('cultural-tour')">Book Tour</button>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-image">🚁 Helicopter</div>
+                            <div class="activity-content">
+                                <h3 class="activity-title">Helicopter Rides</h3>
+                                <p class="activity-price">From $199/person</p>
+                                <p>Scenic helicopter tours offering breathtaking aerial views of the island.</p>
+                                <button class="action-btn" onclick="openBookingModal('helicopter-ride')">Book Flight</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="emergency-contacts" id="emergency-info">
+                        <h3>🚨 Emergency Contacts</h3>
+                        <p><strong>Hospital:</strong> (555) 123-4567</p>
+                        <p><strong>Police:</strong> (555) 911-0000</p>
+                        <p><strong>Fire Dept:</strong> (555) 333-4444</p>
+                        <p><strong>Tourist Hotline:</strong> (555) 555-HELP</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Available 24/7 with multilingual staff</p>
+                    </div>
+
+                    <div class="weather-widget">
+                        <h3>🌤️ Current Weather</h3>
+                        <p><strong>Temperature:</strong> 82°F (28°C)</p>
+                        <p><strong>Conditions:</strong> Partly Cloudy</p>
+                        <p><strong>Wind:</strong> 8 mph East</p>
+                        <p><strong>Humidity:</strong> 75%</p>
+                    </div>
+
+                    <div class="currency-info">
+                        <h3>💰 Currency Accepted</h3>
+                        <p><strong>Primary:</strong> US Dollar (USD)</p>
+                        <p><strong>Also Accepted:</strong></p>
+                        <ul style="margin-left: 1rem;">
+                            <li>Euro (EUR)</li>
+                            <li>Japanese Yen (YEN)</li>
+                        </ul>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Major credit cards accepted at most businesses</p>
+                    </div>
+
+                    <div class="quick-facts">
+                        <h3>ℹ️ Quick Facts</h3>
+                        <p><strong>Power:</strong> 120V (US standard)</p>
+                        <p><strong>Drinking Age:</strong> 18 years</p>
+                        <p><strong>Alcohol Sales:</strong> 9 AM - Midnight</p>
+                        <p><strong>Language:</strong> English widely spoken in tourist areas</p>
+                        <p><strong>Safety:</strong> Very low crime rate</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section class="section" id="eat">
+        <div class="container">
+            <h2>Dining & Restaurants</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">Enjoy fresh local cuisine and international favorites across the island</p>
+
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">🐟 Local Seafood</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Island Fish & Rice</h3>
+                        <p class="activity-price">$12-25 per meal</p>
+                        <p>5 restaurants serving fresh local fish with traditional rice dishes. Catch of the day specials available.</p>
+                        <button class="action-btn" onclick="openBookingModal('local-seafood')">Make Reservation</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🍔 American Style</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">American Cuisine</h3>
+                        <p class="activity-price">$15-30 per meal</p>
+                        <p>3 restaurants offering familiar American favorites - burgers, steaks, sandwiches, and comfort food.</p>
+                        <button class="action-btn" onclick="openBookingModal('american-cuisine')">Make Reservation</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🍜 Pan-Asian</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Pan-Asian Fusion</h3>
+                        <p class="activity-price">$18-35 per meal</p>
+                        <p>2 restaurants featuring diverse Asian cuisines - sushi, Thai, Chinese, and fusion dishes with local ingredients.</p>
+                        <button class="action-btn" onclick="openBookingModal('pan-asian')">Make Reservation</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🍺 Local Pubs</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Pubs & Microbrewery</h3>
+                        <p class="activity-price">$8-20 per meal</p>
+                        <p>Several local pubs including a microbrewery. Casual dining with local beer and pub food.</p>
+                        <button class="action-btn" onclick="openBookingModal('pub-brewery')">Make Reservation</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🛒 Grocery Stores</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Grocery & Convenience</h3>
+                        <p class="activity-price">Self-service options</p>
+                        <p>2 supermarkets, 2 smaller grocery stores, and 1 24-hour convenience store for snacks and supplies.</p>
+                        <button class="action-btn" onclick="showGroceryInfo()">Store Locations</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🌙 Night Life</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Entertainment Dining</h3>
+                        <p class="activity-price">$20-40 per meal</p>
+                        <p>New dance club, entertainment venues, and late-night dining options in Merriton Landing area.</p>
+                        <button class="action-btn" onclick="openBookingModal('entertainment-dining')">Make Reservation</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                <h3 style="color: #856404; margin-bottom: 1rem;">🕐 Important Dining Hours</h3>
+                <p><strong>Alcohol Service Hours:</strong> 9:00 AM - Midnight daily</p>
+                <p><strong>Drinking Age:</strong> 18 years (not strictly enforced)</p>
+                <p><strong>Holiday Closures:</strong> Many restaurants close on national holidays - plan accordingly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section class="section" id="stay">
+        <div class="container">
+            <h2>Where to Stay</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">All accommodations are government regulated and regularly inspected for your safety</p>
+
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">🏨 Four-Star Resort</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Luxury Resort</h3>
+                        <p class="activity-price">$200-350 per night</p>
+                        <p>One large four-star resort with full amenities, beachfront location, and premium services.</p>
+                        <button class="action-btn" onclick="openBookingModal('luxury-resort')">Book Resort</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🏠 Family Hotels</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Small Family Hotels</h3>
+                        <p class="activity-price">$80-150 per night</p>
+                        <p>Many small, family-owned hotels offering personal service and local hospitality throughout the island.</p>
+                        <button class="action-btn" onclick="openBookingModal('family-hotel')">Book Hotel</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🛏️ Bed & Breakfast</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Bed & Breakfasts</h3>
+                        <p class="activity-price">$60-120 per night</p>
+                        <p>Growing number of charming B&Bs offering intimate accommodations with breakfast included.</p>
+                        <button class="action-btn" onclick="openBookingModal('bed-breakfast')">Book B&B</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🎒 Budget Hostel</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Inexpensive Hostel</h3>
+                        <p class="activity-price">$25-45 per night</p>
+                        <p>Budget-friendly hostel accommodation perfect for backpackers and budget-conscious travelers.</p>
+                        <button class="action-btn" onclick="openBookingModal('budget-hostel')">Book Hostel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section class="section" id="plan">
+        <div class="container">
+            <h2>Transportation</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: #666;">Getting to Taniti and moving around the island</p>
+
+            <h3 style="color: #2c5530; margin-bottom: 2rem; text-align: center;">Getting to Taniti Island</h3>
+            <div class="activities-grid" style="margin-bottom: 4rem;">
+                <div class="activity-card">
+                    <div class="activity-image">✈️ By Air</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Airport Arrivals</h3>
+                        <p>Small airport accommodates small jets and propeller planes. Airport expansion planned to handle larger jets within the next few years.</p>
+                        <button class="action-btn" onclick="openBookingModal('airport-transfer')">Book Airport Transfer</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🚢 By Sea</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Cruise Ship</h3>
+                        <p>Small cruise ship docks in Yellow Leaf Bay for one night per week. Beautiful harbor arrival experience.</p>
+                        <button class="action-btn" onclick="showCruiseInfo()">Cruise Schedule</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: #2c5530; margin-bottom: 2rem; text-align: center;">Getting Around Taniti Island</h3>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">🚌 Public Buses</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Bus Transportation</h3>
+                        <p><strong>Taniti City:</strong> 5 AM - 11 PM daily<br>
+                            <strong>Rest of Island:</strong> Private buses available<br>
+                            Affordable and reliable service</p>
+                        <button class="action-btn" onclick="showBusInfo()">Bus Routes & Schedule</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🚗 Rental Cars</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Car Rentals</h3>
+                        <p>Available from local rental agency near the airport. Perfect for exploring the entire island at your own pace.</p>
+                        <button class="action-btn" onclick="openBookingModal('rental-car')">Book Rental Car</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🚕 Taxis</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Taxi Service</h3>
+                        <p>Available in Taniti City for convenient point-to-point transportation. Great for short trips and local travel.</p>
+                        <button class="action-btn" onclick="showTaxiInfo()">Taxi Information</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🚲 Bike Rentals</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Bicycle Rentals</h3>
+                        <p>Available from several vendors. Helmets included and required by law. Perfect for flat, walkable Taniti City.</p>
+                        <button class="action-btn" onclick="openBookingModal('bike-rental')">Book Bike Rental</button>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="activity-image">🚶‍♂️ Walking</div>
+                    <div class="activity-content">
+                        <h3 class="activity-title">Walking Areas</h3>
+                        <p><strong>Taniti City:</strong> Very flat and walkable<br>
+                            <strong>Merriton Landing:</strong> Easy to explore on foot<br>
+                            Great for downtown and beach areas</p>
+                        <button class="action-btn" onclick="showWalkingInfo()">Walking Guide</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Contact & Information</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="activity-card">
+                    <h3 class="activity-title">Tourism Information</h3>
+                    <p><strong>Taniti Tourism Board</strong><br>
+                        123 Island Way<br>
+                        Taniti City, Taniti<br>
+                        Phone: (555) 123-VISIT<br>
+                        Email: info@tanititourism.com</p>
+                    <button class="action-btn" onclick="openBookingModal('contact')">Contact Us</button>
+                </div>
+
+                <div class="activity-card">
+                    <h3 class="activity-title">Medical Services</h3>
+                    <p><strong>Island Hospital</strong><br>
+                        24/7 Emergency Care<br>
+                        Multilingual Staff<br>
+                        Emergency: (555) 123-4567<br>
+                        Several clinics also available</p>
+                </div>
+
+                <div class="activity-card">
+                    <h3 class="activity-title">Safety Information</h3>
+                    <p><strong>Very Low Crime Rate</strong><br>
+                        Rare violent crime<br>
+                        Watch for petty theft in tourist areas<br>
+                        Police: (555) 911-0000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Information Section -->
+    <section class="section" id="weather-info" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Weather & Climate Information</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="activity-card">
+                    <h3 class="activity-title">🌤️ Current Conditions</h3>
+                    <p><strong>Temperature:</strong> 82°F (28°C)</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> 8 mph East</p>
+                    <p><strong>Humidity:</strong> 75%</p>
+                    <p><strong>Ocean Temperature:</strong> 79°F (26°C)</p>
+                </div>
+
+                <div class="activity-card">
+                    <h3 class="activity-title">🌴 Year-Round Climate</h3>
+                    <p><strong>Average Temperature:</strong> 78-85°F (26-29°C)</p>
+                    <p><strong>Climate Type:</strong> Tropical</p>
+                    <p><strong>Dry Season:</strong> December - April</p>
+                    <p><strong>Wet Season:</strong> May - November (brief showers)</p>
+                    <p><strong>Trade Winds:</strong> Provide comfortable breeze</p>
+                </div>
+
+                <div class="activity-card">
+                    <h3 class="activity-title">👕 What to Pack</h3>
+                    <p>• Light, breathable clothing</p>
+                    <p>• Sunscreen & wide-brimmed hat</p>
+                    <p>• Light rain jacket</p>
+                    <p>• Comfortable walking shoes</p>
+                    <p>• Swimwear and beach gear</p>
+                    <p>• Insect repellent for rainforest</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Taniti Tourism Board<br>
+                    123 Island Way<br>
+                    Taniti City, Taniti<br>
+                    Phone: (555) 123-VISIT</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#packages">Popular Packages</a>
+                <a href="#explore">Activities</a>
+                <a href="#stay">Accommodations</a>
+                <a href="#plan">Transportation</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Travel Information</h4>
+                <a href="#" onclick="showWeatherInfo(); return false;">Weather & Climate</a>
+                <a href="#" onclick="showGettingAroundInfo(); return false;">Getting Around</a>
+                <a href="#emergency-info">Emergency Contacts</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#" aria-label="Visit our Instagram page">📷 Instagram</a>
+                <a href="#" aria-label="Visit our Facebook page">📘 Facebook</a>
+                <a href="#" aria-label="Visit our Twitter page">🐦 Twitter</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Taniti Tourism Board. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Booking Modal -->
+<div id="booking-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-content">
+        <div class="confirmation" id="confirmation-message">
+            <strong>✅ Booking Confirmed!</strong><br>
+            Thank you for your reservation. A confirmation email has been sent to your email address.
+        </div>
+
+        <h3 id="modal-title">Book Your Experience</h3>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="booking-type">Booking Type:</label>
+                <select id="booking-type" name="booking-type" required>
+                    <option value="">Select an option</option>
+                    <option value="hotel">Hotel Accommodation</option>
+                    <option value="activity">Activity/Tour</option>
+                    <option value="transport">Transportation</option>
+                    <option value="package">Complete Package</option>
+                    <option value="restaurant">Restaurant Reservation</option>
+                    <option value="contact">General Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="guest-name">Full Name:</label>
+                <input type="text" id="guest-name" name="guest-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guest-email">Email Address:</label>
+                <input type="email" id="guest-email" name="guest-email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guest-phone">Phone Number:</label>
+                <input type="tel" id="guest-phone" name="guest-phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="check-in">Check-in / Start Date:</label>
+                <input type="date" id="check-in" name="check-in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="check-out">Check-out / End Date:</label>
+                <input type="date" id="check-out" name="check-out">
+            </div>
+
+            <div class="form-group">
+                <label for="party-size">Number of Guests:</label>
+                <select id="party-size" name="party-size" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6+">6+ Guests</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests or Questions:</label>
+                <textarea id="special-requests" name="special-requests" rows="3" placeholder="Any dietary restrictions, accessibility needs, or special occasions?"></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                <button type="submit" class="cta-btn">Confirm Booking</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
